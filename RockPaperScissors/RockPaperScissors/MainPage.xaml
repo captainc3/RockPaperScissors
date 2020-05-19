@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:RPS="clr-namespace:RockPaperScissors"
+             mc:Ignorable="d"
+             BackgroundColor="LightBlue"
+             x:Class="RockPaperScissors.MainPage">
+
+    <ContentPage.Content>
+    
+        <StackLayout Padding="15,20,15,0" x:Name="RootLayout" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+        
+            <!-- Place new controls here -->
+            <Label x:Name="Title" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="18" TextColor="SlateGray"/>
+
+            <Grid x:Name="ButtonsGrid" HorizontalOptions="CenterAndExpand" Margin="20,10">
+            
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+            
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <RPS:GameButton x:Name="RockButton" Grid.Row="0" Grid.Column="0" Text="Rock"></RPS:GameButton>
+                <RPS:GameButton x:Name="PaperButton" Grid.Row="0" Grid.Column="1" Text="Paper"></RPS:GameButton>
+                <RPS:GameButton x:Name="ScissorsButton" Grid.Row="0" Grid.Column="2" Text="Scissors"></RPS:GameButton>
+            
+            </Grid>
+
+            <Button x:Name="ShootButton" Text="Shoot" HorizontalOptions="FillAndExpand" 
+                    Margin="10" BorderWidth="1" BorderColor="SlateGray" BackgroundColor="DarkBlue" 
+                    TextColor="White"></Button>
+        
+        </StackLayout>
+        
+    </ContentPage.Content>
+
+</ContentPage>
